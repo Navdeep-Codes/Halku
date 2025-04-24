@@ -1,6 +1,6 @@
 javascript:(function(){
   const assistant = document.createElement('div');
-  assistant.id = 'cute-ai-assistant';
+  assistant.id = 'halku';
   assistant.style = `
     position: fixed;
     bottom: 20px;
