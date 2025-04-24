@@ -19,7 +19,7 @@ javascript:(function(){
     z-index: 999999;
     transition: transform 0.2s ease;
   `;
-  assistant.textContent = "AI Buddy";
+  assistant.textContent = "Halku";
   document.body.appendChild(assistant);
 
   const leftEar = document.createElement('div');
@@ -34,7 +34,7 @@ javascript:(function(){
     border-radius: 50%;
     text-align: center;
     line-height: 70px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     color: white;
     cursor: pointer;
