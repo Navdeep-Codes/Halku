@@ -22,13 +22,6 @@ javascript:(function(){
   assistant.textContent = "AI Buddy";
   document.body.appendChild(assistant);
 
-  assistant.addEventListener('mouseover', () => {
-    assistant.style.transform = 'scale(1.1)';
-  });
-  assistant.addEventListener('mouseout', () => {
-    assistant.style.transform = 'scale(1)';
-  });
-
   const leftEar = document.createElement('div');
   leftEar.id = 'left-ear';
   leftEar.style = `
@@ -187,8 +180,8 @@ javascript:(function(){
         })
       });
       const data = await response.json();
-      const explanation = data.choices[0].message.content;
-      alert(`Explanation:\n\n${explanation}`);
+      const reply = data.choices[0].message.content;
+      document.getElementById('ai-response').textContent = reply;
     } catch (error) {
       alert("Error: Unable to fetch explanation.");
     }
