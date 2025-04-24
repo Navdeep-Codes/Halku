@@ -1,5 +1,4 @@
 javascript:(function(){
-  // Create the AI Assistant container
   const assistant = document.createElement('div');
   assistant.id = 'cute-ai-assistant';
   assistant.style = `
@@ -23,7 +22,6 @@ javascript:(function(){
   assistant.textContent = "AI Buddy";
   document.body.appendChild(assistant);
 
-  // Add hover effect
   assistant.addEventListener('mouseover', () => {
     assistant.style.transform = 'scale(1.1)';
   });
@@ -31,7 +29,6 @@ javascript:(function(){
     assistant.style.transform = 'scale(1)';
   });
 
-  // Add ears
   const leftEar = document.createElement('div');
   leftEar.id = 'left-ear';
   leftEar.style = `
@@ -76,7 +73,6 @@ javascript:(function(){
   rightEar.textContent = "QR";
   assistant.appendChild(rightEar);
 
-  // Add hover effects to ears
   [leftEar, rightEar].forEach(ear => {
     ear.addEventListener('mouseover', () => {
       ear.style.transform = 'scale(1.1)';
@@ -86,7 +82,6 @@ javascript:(function(){
     });
   });
 
-  // Add Close Button
   const closeButton = document.createElement('div');
   closeButton.id = 'close-button';
   closeButton.style = `
@@ -108,12 +103,10 @@ javascript:(function(){
   closeButton.textContent = "✕";
   assistant.appendChild(closeButton);
 
-  // Close button removes the assistant
   closeButton.addEventListener('click', () => {
     assistant.remove();
   });
 
-  // Click on main body to open a text area
   assistant.addEventListener('click', () => {
     if (!document.getElementById('ai-prompt-container')) {
       const promptContainer = document.createElement('div');
@@ -173,7 +166,6 @@ javascript:(function(){
     }
   });
 
-  // Explain feature
   leftEar.addEventListener('click', async () => {
     const selectedText = window.getSelection().toString().trim();
     if (!selectedText) {
@@ -203,7 +195,6 @@ javascript:(function(){
     assistant.textContent = "Halku";
   });
 
-  // QR Code feature
   rightEar.addEventListener('click', () => {
     const url = prompt("Enter the URL to generate a QR Code:", window.location.href);
     if (!url) {
